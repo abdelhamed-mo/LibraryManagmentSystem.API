@@ -1,0 +1,137 @@
+[
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440001",
+    "Name": "Margaret Atwood",
+    "BirthDate": "1939-11-18T00:00:00Z",
+    "Gender": "Female",
+    "Nationality": "Canadian",
+    "Bio": "Margaret Eleanor Atwood is a Canadian poet, novelist, literary critic, essayist, teacher, environmental activist, and inventor. She is best known for her works of speculative fiction, including The Handmaid's Tale and its sequel The Testaments.",
+    "PicturUrl": "https://example.com/images/margaret-atwood.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440002",
+    "Name": "Gabriel García Márquez",
+    "BirthDate": "1927-03-06T00:00:00Z",
+    "Gender": "Male",
+    "Nationality": "Colombian",
+    "Bio": "Gabriel José de la Concordia García Márquez was a Colombian novelist, short-story writer, screenwriter, and journalist, known affectionately as Gabo throughout Latin America. Considered one of the most significant authors of the 20th century.",
+    "PicturUrl": "https://example.com/images/gabriel-garcia-marquez.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440003",
+    "Name": "Toni Morrison",
+    "BirthDate": "1931-02-18T00:00:00Z",
+    "Gender": "Female",
+    "Nationality": "American",
+    "Bio": "Toni Morrison was an American novelist, essayist, book editor, and college professor. Her first novel, The Bluest Eye, was published in 1970. The critically acclaimed Song of Solomon brought her national attention and won the National Book Critics Circle Award.",
+    "PicturUrl": "https://example.com/images/toni-morrison.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440004",
+    "Name": "Haruki Murakami",
+    "BirthDate": "1949-01-12T00:00:00Z",
+    "Gender": "Male",
+    "Nationality": "Japanese",
+    "Bio": "Haruki Murakami is a Japanese writer. His novels, essays, and short stories have been bestsellers in Japan as well as internationally, with his work translated into 50 languages and selling millions of copies outside Japan.",
+    "PicturUrl": "https://example.com/images/haruki-murakami.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440005",
+    "Name": "Chimamanda Ngozi Adichie",
+    "BirthDate": "1977-09-15T00:00:00Z",
+    "Gender": "Female",
+    "Nationality": "Nigerian",
+    "Bio": "Chimamanda Ngozi Adichie is a Nigerian writer whose works include novels, short stories and nonfiction. She was described in The Times Literary Supplement as 'the most prominent' of a 'procession of critically acclaimed young anglophone authors' from Africa.",
+    "PicturUrl": "https://example.com/images/chimamanda-adichie.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440006",
+    "Name": "George Orwell",
+    "BirthDate": "1903-06-25T00:00:00Z",
+    "Gender": "Male",
+    "Nationality": "British",
+    "Bio": "Eric Arthur Blair, known by his pen name George Orwell, was an English novelist, essayist, journalist and critic. His work is characterised by lucid prose, biting social criticism, total opposition to totalitarianism, and outspoken support of democratic socialism.",
+    "PicturUrl": "https://example.com/images/george-orwell.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440007",
+    "Name": "Virginia Woolf",
+    "BirthDate": "1882-01-25T00:00:00Z",
+    "Gender": "Female",
+    "Nationality": "British",
+    "Bio": "Adeline Virginia Woolf was an English writer, considered one of the most important modernist 20th-century authors and a pioneer in the use of stream of consciousness as a narrative device.",
+    "PicturUrl": "https://example.com/images/virginia-woolf.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440008",
+    "Name": "Paulo Coelho",
+    "BirthDate": "1947-08-24T00:00:00Z",
+    "Gender": "Male",
+    "Nationality": "Brazilian",
+    "Bio": "Paulo Coelho de Souza is a Brazilian lyricist and novelist, best known for his novel The Alchemist. In 2014, he uploaded his personal papers online to create a virtual Paulo Coelho Foundation.",
+    "PicturUrl": "https://example.com/images/paulo-coelho.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440009",
+    "Name": "Zadie Smith",
+    "BirthDate": "1975-10-25T00:00:00Z",
+    "Gender": "Female",
+    "Nationality": "British",
+    "Bio": "Zadie Smith is an English novelist, essayist, and short-story writer. Her debut novel, White Teeth, won the 2000 James Tait Black Memorial Prize for fiction, the 2000 Whitbread First Novel Award and the 2001 Commonwealth Writers' Prize Overall Winner Best First Book.",
+    "PicturUrl": "https://example.com/images/zadie-smith.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440010",
+    "Name": "Salman Rushdie",
+    "BirthDate": "1947-06-19T00:00:00Z",
+    "Gender": "Male",
+    "Nationality": "British-Indian",
+    "Bio": "Sir Ahmed Salman Rushdie is an Indian-born British-American novelist and essayist. His second novel, Midnight's Children, won the Booker Prize in 1981 and was deemed to be 'the best novel of all winners' on two occasions.",
+    "PicturUrl": "https://example.com/images/salman-rushdie.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440011",
+    "Name": "Isabel Allende",
+    "BirthDate": "1942-08-02T00:00:00Z",
+    "Gender": "Female",
+    "Nationality": "Chilean-American",
+    "Bio": "Isabel Allende is a Chilean writer. Allende, whose works sometimes contain aspects of the 'magic realist' tradition, is famous for novels such as The House of the Spirits and City of the Beasts, which have been commercially highly successful.",
+    "PicturUrl": "https://example.com/images/isabel-allende.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440012",
+    "Name": "Kazuo Ishiguro",
+    "BirthDate": "1954-11-08T00:00:00Z",
+    "Gender": "Male",
+    "Nationality": "British-Japanese",
+    "Bio": "Sir Kazuo Ishiguro is a British novelist, screenwriter, musician, and short-story writer. He was awarded the Nobel Prize in Literature in 2017. In 2008, The Times ranked Ishiguro 32nd on their list of 'The 50 greatest British writers since 1945'.",
+    "PicturUrl": "https://example.com/images/kazuo-ishiguro.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440013",
+    "Name": "Ayn Rand",
+    "BirthDate": "1905-02-02T00:00:00Z",
+    "Gender": "Female",
+    "Nationality": "Russian-American",
+    "Bio": "Ayn Rand was a Russian-born American writer and philosopher. She is known for her two best-selling novels, The Fountainhead and Atlas Shrugged, and for developing a philosophical system she named Objectivism.",
+    "PicturUrl": "https://example.com/images/ayn-rand.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440014",
+    "Name": "Chinua Achebe",
+    "BirthDate": "1930-11-16T00:00:00Z",
+    "Gender": "Male",
+    "Nationality": "Nigerian",
+    "Bio": "Chinua Achebe was a Nigerian novelist, poet, professor, and critic. His first novel Things Fall Apart is the most widely read book in modern African literature and has become a classic of world literature.",
+    "PicturUrl": "https://example.com/images/chinua-achebe.jpg"
+  },
+  {
+    "Id": "550e8400-e29b-41d4-a716-446655440015",
+    "Name": "Maya Angelou",
+    "BirthDate": "1928-04-04T00:00:00Z",
+    "Gender": "Female",
+    "Nationality": "American",
+    "Bio": "Maya Angelou was an American poet, memoirist, and civil rights activist. She published seven autobiographies, three books of essays, several books of poetry, and is credited with a list of plays, movies, and television shows spanning over 50 years.",
+    "PicturUrl": "https://example.com/images/maya-angelou.jpg"
+  }
+]

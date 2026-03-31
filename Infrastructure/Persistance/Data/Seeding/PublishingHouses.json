@@ -1,0 +1,77 @@
+[
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440001",
+    "Name": "Penguin Random House",
+    "Location": "New York, USA"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440002",
+    "Name": "HarperCollins Publishers",
+    "Location": "New York, USA"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440003",
+    "Name": "Macmillan Publishers",
+    "Location": "London, UK"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440004",
+    "Name": "Simon & Schuster",
+    "Location": "New York, USA"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440005",
+    "Name": "Hachette Book Group",
+    "Location": "New York, USA"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440006",
+    "Name": "Scholastic Corporation",
+    "Location": "New York, USA"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440007",
+    "Name": "Oxford University Press",
+    "Location": "Oxford, UK"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440008",
+    "Name": "Cambridge University Press",
+    "Location": "Cambridge, UK"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440009",
+    "Name": "Bloomsbury Publishing",
+    "Location": "London, UK"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440010",
+    "Name": "Vintage Books",
+    "Location": "New York, USA"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440011",
+    "Name": "Faber & Faber",
+    "Location": "London, UK"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440012",
+    "Name": "Doubleday",
+    "Location": "New York, USA"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440013",
+    "Name": "Knopf Doubleday Publishing Group",
+    "Location": "New York, USA"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440014",
+    "Name": "Farrar, Straus and Giroux",
+    "Location": "New York, USA"
+  },
+  {
+    "Id": "650e8400-e29b-41d4-a716-446655440015",
+    "Name": "Grove Atlantic",
+    "Location": "New York, USA"
+  }
+]

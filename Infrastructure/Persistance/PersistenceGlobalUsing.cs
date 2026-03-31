@@ -1,0 +1,13 @@
+﻿global using System.Numerics;
+global using Domain.Contracts.IRepositories;
+global using Persistence.Data;
+global using System.Reflection;
+global using System.Runtime.Serialization;
+global using System.Text.Json;
+global using System.Text.Json.Serialization;
+global using Domain.Entities;
+global using System.Collections.Concurrent;
+global using Domain.Entities.IdentityModule;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore;
+global using Domain.Entities.BookModule;

@@ -1,0 +1,22 @@
+﻿global using Service.ConcreteSpecifications;
+global using ServiceAbstraction;
+global using Domain.Contracts.IRepositories;
+global using Domain.Entities.BookModule;
+global using AutoMapper;
+global using Shared.ReaderModels;
+global using Domain.Exceptions.NotFoundExceptions;
+global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Threading.Tasks;
+global using Shared.AdminModels;
+global using Domain.Entities.IdentityModule;
+global using Domain.Exceptions;
+global using Microsoft.AspNetCore.Identity;
+global using Shared.AuthenticationModels;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.IdentityModel.Tokens;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;
+global using System.Text;
+
