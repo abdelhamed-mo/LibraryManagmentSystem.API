@@ -22,7 +22,6 @@
 		{
 			var user = new User()
 			{
-
 				Email = register.Email,
 				DisplayName = register.DisplayName,
 				UserName = register.UserName,
