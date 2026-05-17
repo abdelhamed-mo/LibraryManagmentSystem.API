@@ -47,6 +47,8 @@ namespace LibraryManagementSystem.API.MiddleWares
 				=> ValidationHandle(validationException, error),
 				UnAuthorizedException 
 				=> (int)HttpStatusCode.Unauthorized,
+				UnSubscribedException
+				=> (int)HttpStatusCode.Forbidden,
 				_ 
 				=> (int)HttpStatusCode.InternalServerError,
 			};
