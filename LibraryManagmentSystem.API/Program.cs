@@ -46,7 +46,9 @@ namespace LibraryManagementSystem.API
 				opt.Password.RequireNonAlphanumeric = false;
 				opt.Password.RequiredLength = 8;
 				opt.User.RequireUniqueEmail = true;
-			}).AddEntityFrameworkStores<StoreContext>();
+			})
+			.AddEntityFrameworkStores<StoreContext>()
+			.AddDefaultTokenProviders();
 
 			builder.Services.AddAuthentication(options =>
 			{

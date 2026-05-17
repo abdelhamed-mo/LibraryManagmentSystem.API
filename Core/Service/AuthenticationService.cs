@@ -1,6 +1,8 @@
-﻿namespace Service
+﻿using Microsoft.AspNetCore.WebUtilities;
+
+namespace Service
 {
-	public class AuthenticationService(UserManager<User> userManager, IConfiguration configuration) : IAuthenticationService
+	public class AuthenticationService(UserManager<User> userManager, IConfiguration configuration, IEmailService emailService) : IAuthenticationService
 	{
 		public async Task<UserResultDto> LoginAsync(LoginDto login)
 		{
@@ -65,6 +67,27 @@
 					expires: expire,
 					claims: claims);
 			return new JwtSecurityTokenHandler().WriteToken(token);
+		}
+		public async Task<string> ForgotPasswordAsync(string email)
+		{
+			var user = await userManager.FindByEmailAsync(email);
+			if (user == null) throw new UnAuthorizedException("Email Doesn't Exist");
+			var token = await userManager.GeneratePasswordResetTokenAsync(user);
+			var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+			var resetLink = $"https://localhost:7271/api/ResetPassword?email={email}&token={encodedToken}";
+			// Send the reset link to the user's email
+			// You can use an email service to send the email
+			emailService.EmailSender(email, "Password Reset", $"Click the link to reset your password: {resetLink}");
+			return encodedToken; // need to update for json
+		}
+		public async Task<string> ResetPasswordAsync(ResetPasswordDto resetPassword)
+		{
+			var user = await userManager.FindByEmailAsync(resetPassword.Email);
+			if (user == null) throw new UnAuthorizedException("Email Doesn't Exist");
+			var decodedToken = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(resetPassword.Token));
+			var result = await userManager.ResetPasswordAsync(user, decodedToken, resetPassword.NewPassword);
+			if (!result.Succeeded) throw new ValidationException(result.Errors.Select(e => e.Description));
+			return "Password Changed Successfully";
 		}
 	}
 }

@@ -1,17 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ServiceAbstraction;
-using Shared.AdminModels;
-using Shared.ReaderModels;
-
-namespace Presentation
+﻿namespace Presentation
 {
 	public class AdminController(IServiceManager serviceManager) : ApiBaseController
 	{
 		#region Books
 		[HttpGet("Book")]
 		public async Task<ActionResult<FullBookDto>> GetBook([FromQuery] Guid id)
-	=> Ok(await serviceManager.AdminService.GetBookById(id));
+			=> Ok(await serviceManager.AdminService.GetBookById(id));
 		[HttpGet("Books")]
 		public async Task<ActionResult<FullBookDto>> GetAllBook([FromQuery] BooksParams _params)
 			=> Ok(await serviceManager.AdminService.GetAllBooks(_params));

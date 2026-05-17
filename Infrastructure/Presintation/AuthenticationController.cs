@@ -1,16 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ServiceAbstraction;
-using Shared.AuthenticationModels;
-
-namespace Presentation
+﻿namespace Presentation
 {
 	public class AuthenticationController(IServiceManager serviceManager) : ApiBaseController
 	{
-        [HttpPost("Login")]
+		[HttpPost("Login")]
 		public async Task<ActionResult<UserResultDto>> Login([FromBody] LoginDto loginDto)
 			=> Ok(await serviceManager.AuthenticationService.LoginAsync(loginDto));
 		[HttpPost("Register")]
 		public async Task<ActionResult<UserResultDto>> Register([FromBody] RegisterDto registerDto)
 			=> Ok(await serviceManager.AuthenticationService.RegisterAsync(registerDto));
+		[HttpPost("ForgotPassword")]
+		public async Task<ActionResult> ForgotPassword(string email)
+			=> Ok(await serviceManager.AuthenticationService.ForgotPasswordAsync(email));
+		[HttpPost("ResetPassword")]
+		public async Task<ActionResult> ResetPassword([FromBody] ResetPasswordDto resetPasswordDto)
+			=> Ok(await serviceManager.AuthenticationService.ResetPasswordAsync(resetPasswordDto));
 	}
 }

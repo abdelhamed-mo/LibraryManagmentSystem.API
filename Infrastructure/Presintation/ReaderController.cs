@@ -1,19 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using ServiceAbstraction;
-using Shared.ReaderModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Presentation
+﻿namespace Presentation
 {
 	public class ReaderController(IServiceManager ServiceManager) : ApiBaseController
 	{
 		[HttpGet("Books")]
-		[Authorize]
+		[Authorize(Policy = "Paid")]
 		public async Task<ActionResult<PaginatedResultDto<BookDto>>> GetAllBooks([FromQuery] BooksParams _params)
 		=> Ok(await ServiceManager.ReaderService.GetAllBooksAsync(_params));
 		[HttpGet("Book")]

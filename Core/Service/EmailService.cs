@@ -4,19 +4,21 @@ using MimeKit;
 
 namespace Service
 {
-	internal class EmailService(IConfiguration configuration) : IEmailService
+	public class EmailService(IConfiguration configuration) : IEmailService
 	{
 		public void EmailSender(string to, string subject, string body)
 		{
+			// need to update to get the email settings from configuration
 			var displayName = configuration["EmailSettings:DisplayName"];
 			var senderEmail = configuration["EmailSettings:Email"];
 			var password = configuration["EmailSettings:Password"];
 			var host = configuration["EmailSettings:Host"];
 			var port = int.Parse(configuration["EmailSettings:Port"]);
-			
+
 			var message = new MimeMessage();
-			message.From.Add(new MailboxAddress(displayName, senderEmail));
-			message.To.Add(new MailboxAddress("", to));
+
+			message.From.Add( MailboxAddress.Parse(senderEmail));
+			message.To.Add(MailboxAddress.Parse(to));
 			message.Subject = subject;
 			message.Body = new TextPart("plain") { Text = body };
 
