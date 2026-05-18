@@ -12,6 +12,8 @@ namespace Service
 			var result = await userManager.CheckPasswordAsync(user, login.Password);
 			if (!result) throw new UnAuthorizedException("Wrong Password");
 
+			if (!user.EmailConfirmed) throw new UnAuthorizedException("User Not Confirmed! \n Please Check Your Email");
+
 			return new UserResultDto()
 			{
 				Email = user.Email,
@@ -33,6 +35,11 @@ namespace Service
 
 			if (!result.Succeeded) throw new ValidationException(result.Errors.Select(e => e.Description));
 
+			var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+			var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+			var confirmationLink = $"https://localhost:7271/api/Authentication/ConfirmEmail?email={user.Email}&token={encodedToken}";
+			emailService.EmailSender(user.Email, "Email Confirmation", $"Click the link to confirm your email: {confirmationLink}");
+
 			return new UserResultDto()
 			{
 				Email = user.Email,
@@ -40,6 +47,22 @@ namespace Service
 				UserName = user.UserName,
 				Token = await GenerateTokenAsync(user),
 			};
+		}
+		public async Task<string> ConfirmEmailAsync(string email, string token)
+		{
+			var user = await userManager.FindByEmailAsync(email);
+
+			if (user == null) throw new UnAuthorizedException("Email Doesn't Exist");
+
+			if (user.EmailConfirmed) return "Email Confirmed Before!";
+
+			var decodedToken = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
+
+			var result = await userManager.ConfirmEmailAsync(user, decodedToken);
+
+			if (!result.Succeeded) throw new ValidationException(result.Errors.Select(e => e.Description));
+
+			return "Email Confirmed Successfully";
 		}
 		private async Task<string> GenerateTokenAsync(User user)
 		{
@@ -74,11 +97,9 @@ namespace Service
 			if (user == null) throw new UnAuthorizedException("Email Doesn't Exist");
 			var token = await userManager.GeneratePasswordResetTokenAsync(user);
 			var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
-			var resetLink = $"https://localhost:7271/api/ResetPassword?email={email}&token={encodedToken}";
-			// Send the reset link to the user's email
-			// You can use an email service to send the email
+			var resetLink = $"https://localhost:7271/api/Authentication/ResetPassword?email={email}&token={encodedToken}";
 			emailService.EmailSender(email, "Password Reset", $"Click the link to reset your password: {resetLink}");
-			return encodedToken; // need to update for json
+			return "Reset link sent successfully";
 		}
 		public async Task<string> ResetPasswordAsync(ResetPasswordDto resetPassword)
 		{
@@ -89,5 +110,6 @@ namespace Service
 			if (!result.Succeeded) throw new ValidationException(result.Errors.Select(e => e.Description));
 			return "Password Changed Successfully";
 		}
+
 	}
 }

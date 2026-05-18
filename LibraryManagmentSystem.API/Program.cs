@@ -1,28 +1,3 @@
-
-using AutoMapper;
-using Domain.Contracts.IRepositories;
-using Domain.Entities.IdentityModule;
-using LibraryManagementSystem.API.MiddleWares;
-using LibraryManagementSystem.API.Policies;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using Persistence.Data;
-using Persistence.Repositories;
-using Presentation;
-using Service;
-using Service.MappingProfiles;
-using ServiceAbstraction;
-using System.Reflection;
-using System.Reflection.Metadata;
-using System.Text;
-
-
 namespace LibraryManagementSystem.API
 {
 	public class Program(StoreContext context)

@@ -8,6 +8,9 @@
 		[HttpPost("Register")]
 		public async Task<ActionResult<UserResultDto>> Register([FromBody] RegisterDto registerDto)
 			=> Ok(await serviceManager.AuthenticationService.RegisterAsync(registerDto));
+		[HttpPost("ConfirmEmail")]
+		public async Task<ActionResult> ConfirmEmail(string email, string token)
+			=> Ok(await serviceManager.AuthenticationService.ConfirmEmailAsync(email, token));
 		[HttpPost("ForgotPassword")]
 		public async Task<ActionResult> ForgotPassword(string email)
 			=> Ok(await serviceManager.AuthenticationService.ForgotPasswordAsync(email));
